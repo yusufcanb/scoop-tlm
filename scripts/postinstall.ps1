@@ -1,1 +1,0 @@
-echo "preinstall script running..."
