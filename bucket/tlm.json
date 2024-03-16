@@ -6,11 +6,11 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/yusufcanb/tlm/releases/download/1.1/tlm_1.1_windows_amd64.exe",
-            "hash": "a0ca50dcfd317da435d35ad9a0ff74b68473f104"
+            "hash": "906838f961ecae3470f2cb5133cf4e2f914a7a021a6da778759cc2c1db87496c"
         },
         "arm64": {
             "url": "https://github.com/yusufcanb/tlm/releases/download/1.1/tlm_1.1_windows_amd64.exe",
-            "hash": "a0ca50dcfd317da435d35ad9a0ff74b68473f104"
+            "hash": "906838f961ecae3470f2cb5133cf4e2f914a7a021a6da778759cc2c1db87496c"
         }
     },
     "bin": "tlm.exe",
