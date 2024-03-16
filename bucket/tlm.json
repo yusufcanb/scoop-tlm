@@ -15,7 +15,7 @@
     },
     "bin": [
         [
-            "tlm_1.0_windows_amd64.exe",
+            "tlm_1.1_windows_amd64.exe",
             "tlm"
         ]
     ],
