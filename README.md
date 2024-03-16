@@ -9,5 +9,5 @@ scoop bucket add tlm https://github.com/yusufcanb/scoop-tlm
 Installing tlm can then be done as follows:
 
 ```
-scoop install tlm
+scoop install tlm/tlm
 ```
