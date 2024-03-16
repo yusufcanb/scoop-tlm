@@ -2,26 +2,27 @@
     "homepage": "https://github.com/yusufcanb/tlm",
     "description": "Local CLI Copilot, powered by CodeLLaMa. 💻🦙",
     "license": "Apache-2.0",
-    "version": "1.1",
+    "version": "1.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/yusufcanb/tlm/releases/download/1.1/tlm_1.1_windows_amd64.exe",
-            "hash": "906838f961ecae3470f2cb5133cf4e2f914a7a021a6da778759cc2c1db87496c"
+            "url": "https://github.com/yusufcanb/tlm/releases/download/1.0/tlm_1.0_windows_amd64.exe",
+            "hash": "5844efb9321996da7b26a300b799f435d22e9c4fb88b84a05a52f618046ee414"
         },
         "arm64": {
-            "url": "https://github.com/yusufcanb/tlm/releases/download/1.1/tlm_1.1_windows_amd64.exe",
-            "hash": "906838f961ecae3470f2cb5133cf4e2f914a7a021a6da778759cc2c1db87496c"
+            "url": "https://github.com/yusufcanb/tlm/releases/download/1.0/tlm_1.0_windows_amd64.exe",
+            "hash": "5844efb9321996da7b26a300b799f435d22e9c4fb88b84a05a52f618046ee414"
         }
     },
     "bin": "tlm.exe",
-    "shortcuts": [
-        [
-            "tlm.exe"
-        ]
+    "pre_install": [
+        "scripts\\pre_install.ps1"
+    ],
+    "post_install": [
+        "scripts\\post_install.ps1"
     ],
     "checkver": {
         "github": "https://github.com/yusufcanb/tlm/releases",
-        "regex": "download/([\\d.]+)/tlm_\\1_windows_amd64"
+        "regex": "download/([\\d.]+)/tlm_([\\d.]+)_windows_amd64.exe"
     },
     "autoupdate": {
         "architecture": {
