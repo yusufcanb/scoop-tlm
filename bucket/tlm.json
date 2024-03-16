@@ -19,6 +19,25 @@
             "tlm"
         ]
     ],
+    "pre_install": [
+        "# Ollama check",
+        "$ollamaHost = $env:OLLAMA_HOST",
+        "if (-not $ollamaHost) {",
+        "    $ollamaHost = \"http://localhost:11434\"",
+        "}",
+
+        "try {",
+        "    Invoke-WebRequest -Uri $ollamaHost -UseBasicParsing -ErrorAction Stop | Out-Null",
+        "} catch {",
+        "    Write-Host \"ERR: Ollama not found.\" -ForegroundColor red",
+        "    Write-Host \"If you have Ollama installed, please make sure it's running and accessible at $ollamaHost\" -ForegroundColor red",
+        "}",
+        "# Remove the tlm directory if it exists",
+        "if (Test-Path \"C:\\Users\\$env:USERNAME\\AppData\\Local\\Programs\\tlm\\\") {",
+        "    Write-Output \"Manual installation of tlm detected. Removing tlm directory to switch scoop.\"",
+        "    Remove-Item -Recurse -Force \"C:\\Users\\$env:USERNAME\\AppData\\Local\\Programs\\tlm\\\"",
+        "}"
+    ],
     "post_install": [
         "tlm deploy"
     ],
