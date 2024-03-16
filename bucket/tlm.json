@@ -19,6 +19,10 @@
             "tlm"
         ]
     ],
+    "post_install": [
+        "tlm deploy",
+        "tlm version"
+    ],
     "checkver": {
         "url": "https://api.github.com/repos/yusufcanb/tlm/releases/latest",
         "jsonpath": "$.name",
