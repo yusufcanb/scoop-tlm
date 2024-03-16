@@ -31,6 +31,8 @@
         "} catch {",
         "    Write-Host \"ERR: Ollama not found.\" -ForegroundColor red",
         "    Write-Host \"If you have Ollama installed, please make sure it's running and accessible at $ollamaHost\" -ForegroundColor red",
+        "    Write-Host \"or configure OLLAMA_HOST environment variable.\" -ForegroundColor red",
+        "    exit -1",
         "}",
         "# Remove the tlm directory if it exists",
         "if (Test-Path \"C:\\Users\\$env:USERNAME\\AppData\\Local\\Programs\\tlm\\\") {",
